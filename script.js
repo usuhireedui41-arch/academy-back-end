@@ -1,18 +1,27 @@
-class Student {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
+class Bankaccount {
+    constructor(owner, balacne) {
+        this.owner = owner;
+        this.balance = balance;
     }
+    deposit(amount) { this.balance += amount; }
+    withdraw(amount) {
+        if (amount > this.balance) return "Not enough balance!";
+        this.balance -= amount;
+    }
+    getblance() { return this.balance; }
+    }
+    function updateBalance() {
+        const owner = document.getElementById('owner').value;
+        const balance = parseFloat(document.getElementById('balance').value);
+        const deposit = parseFloat(document.getElementById('deposit').value);
+        const withdraw = parseFloat(document.getElementById('withdraw').value);
+        const account = new Bankaccount(owner, balance);
 
-    introduce() {
-        return `Hi, I'm ${this.name} and I'm ${this.age} years old.`;
-    }
-    }
+        account.deposit(deposit);
+        const msg= account.withdraw(withdraw);
+        document.getElementById('output').innerText = msg ? msg : 'balance: ' + account.getblance();
+        
+        
+        
 
-    function introduceStudent() {
-    const name = document.getElementById('name').value;
-    const age = parseInt(document.getElementById('age').value);
-    const student = new Student(name, age);
-
-    document.getElementById('output').innerText = student.introduce();
-    }
+    }  
