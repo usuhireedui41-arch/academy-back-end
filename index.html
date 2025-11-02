@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>TodoList</title>
-    <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    h2 { font-size: 22px; font-weight: bold; }
-    label { display: block; margin: 6px 0; }
-    input { margin-left: 5px; width: 150px; }
-    button { margin-top: 8px; padding: 3px 8px; font-size: 14px; }
-    .container { border: 1px solid #ccc; padding: 15px; width: 350px; }
-    .result { margin-top: 10px; font-size: 16px; }
-    </style>
+<meta charset="UTF-8">
+<title>Student</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    }
+    h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+    label {
+    display: block;
+    margin: 5px 0;
+    }
+    input[type="text"], input[type="number"] {
+    margin-left: 5px;
+    width: 120px;
+    }
+    button {
+    margin-top: 8px;
+    padding: 3px 8px;
+    font-size: 14px;
+    }
+    .result {
+    margin-top: 10px;
+    font-size: 16px;
+    }
+    .container {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 350px;
+    }
+</style>
 </head>
 <body>
 
-    <div class="container">
-    <h2>TodoList</h2>
-    <label>Task: <input type="text" id="task"></label>
-    <button onclick="addTask()">Add Task</button>
-    <button onclick="removeTask()">Remove Task</button>
-    <button onclick="showTasks()">Show Tasks</button>
+<div class="container">
+    <h2>Student</h2>
+    <label>
+    Name:
+    <input type="text" id="name" value="Sara">
+    </label>
+    <label>
+    Age:
+    <input type="number" id="age" value="20">
+    </label>
+    <button onclick="introduceStudent()">Introduce</button>
+
     <div id="output" class="result"></div>
-    </div>
+</div>
